@@ -6,14 +6,14 @@
 #    By: phwang <phwang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 13:17:33 by phwang            #+#    #+#              #
-#    Updated: 2025/03/31 21:46:14 by phwang           ###   ########.fr        #
+#    Updated: 2025/04/02 19:07:35 by phwang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = span
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98 -I$(INCLUDE_DIR) -I$(COLOR_DIR)
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -g3 -std=c++98 -I$(INCLUDE_DIR) -I$(COLOR_DIR)
 
 COLOR_DIR = ../include/
 INCLUDE_DIR = include/
@@ -44,7 +44,7 @@ all: $(NAME)
 
 $(OBJ_DIR)/%.o :  $(SRC_DIR)%.cpp
 	@mkdir -p $(dir $@)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 	@$(eval COMPILED_SRCS=$(shell echo $$(($(COMPILED_SRCS)+1))))
 	@echo -n "$(COLOR_BLUE)Compiling Objects $(NAME) $(COLOR_RESET)[$(COLOR_GREEN)"
@@ -59,7 +59,7 @@ $(OBJ_DIR)/%.o :  $(SRC_DIR)%.cpp
 
 $(NAME) : $(OBJS)
 	@echo "$(COLOR_BLUE)\nCompiling $(NAME)...$(COLOR_RESET)"
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME) 
 	@echo "$(COLOR_GREEN)$(NAME) Compilation complete !$(COLOR_RESET)        "
 
 clean:
