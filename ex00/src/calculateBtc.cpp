@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:13:31 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/02 21:43:40 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/02 21:50:19 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ static float calculate(std::map<std::string, float> dataMap, std::string key, fl
 
 bool checkInputFile_nCalculate(std::map<std::string, float> dataMap, std::ifstream &inputFile)
 {
-	(void)dataMap;
 	std::string dateValueInput; // va keep la line du file
 	// check la premiere ligne
 	getline(inputFile, dateValueInput); // pour perdre le "date | value"
