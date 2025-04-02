@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 19:05:56 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/02 21:22:43 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/02 23:41:22 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,16 @@ static bool checkDateValue(int lineNb, std::string date)
 	{
 		return err(lineNb, date, "04, 06, 09 and 11 has between 1 and 30 days");	
 	}
-	else if(month == 2 && !(day > 0 && day < 29))
-	{
-		return err(lineNb, date, "02 has between 1 and 28 days, there's no leap year (annee bissextile)");	
-	}
+	std::tm timeStruct = {};
+    timeStruct.tm_year = year - 1900; 
+    timeStruct.tm_mon = month - 1;
+    timeStruct.tm_mday = day;
+
+    std::time_t t = std::mktime(&timeStruct);
+    if (t == -1 || timeStruct.tm_year + 1900 != year || 
+    timeStruct.tm_mon + 1 != month || timeStruct.tm_mday != day)
+    {    return err(lineNb, date, "invalid date");}
+
 	return true;	
 }
 

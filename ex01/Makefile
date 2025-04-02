@@ -6,11 +6,11 @@
 #    By: phwang <phwang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 13:17:33 by phwang            #+#    #+#              #
-#    Updated: 2025/04/02 19:07:35 by phwang           ###   ########.fr        #
+#    Updated: 2025/04/02 23:51:13 by phwang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = span
+NAME = rpn
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g3 -std=c++98 -I$(INCLUDE_DIR) -I$(COLOR_DIR)
@@ -21,7 +21,7 @@ SRC_DIR = src/
 OBJ_DIR = obj
 
 SRC_FILES = \
-	Span.cpp \
+	RPN.cpp \
 	main.cpp
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 

@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Btc.hpp                                            :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 16:14:14 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/02 23:39:14 by phwang           ###   ########.fr       */
+/*   Created: 2025/04/02 23:43:05 by phwang            #+#    #+#             */
+/*   Updated: 2025/04/02 23:54:53 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BTC_HPP
-#define BTC_HPP
+#ifndef RPN_HPP
+#define RPN_HPP
 
 #include <iostream>
-#include <cstdlib>
-#include <fstream>
-#include <string>
-#include <cstring>
-#include <ctime>
-#include <map>
-#include "Color.hpp"
+#include <stack>
 
-bool checkInputFile_nCalculate(std::map<std::string, float> dataMap, std::ifstream &inputFile);
-bool checkDate(int lineNb, std::string date);
-bool checkValue(int lineNb, std::string value);
-bool err(int lineInputNb, std::string valueInput, std::string const reason);
+void RPN(std::string arg);
 
 #endif

@@ -1,13 +1,3 @@
- std::tm timeStruct = {};
-    timeStruct.tm_year = year - 1900; 
-    timeStruct.tm_mon = month - 1;
-    timeStruct.tm_mday = day;
-
-    std::time_t t = std::mktime(&timeStruct);
-    if (t == -1 || timeStruct.tm_year + 1900 != year || 
-        timeStruct.tm_mon + 1 != month || timeStruct.tm_mday != day)
-        return false;
-
 
 ex01 
 int main(int argc, char **argv)

@@ -6,11 +6,11 @@
 #    By: phwang <phwang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 13:17:33 by phwang            #+#    #+#              #
-#    Updated: 2025/03/31 22:35:35 by phwang           ###   ########.fr        #
+#    Updated: 2025/04/03 00:20:21 by phwang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mutantstack
+NAME = hell
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE_DIR) -I$(COLOR_DIR)
