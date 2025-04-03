@@ -1,62 +1,4 @@
 
-ex01 
-int main(int argc, char **argv)
-{
- argc != 2
- return caca
-
-std::strgin arg = argv[1];
-if(arg.empty())
-return 1
-
- return 0
-}
-
-void RPN(string str) 3 2 1 + -
-stack = 3 2 1
-{
-  std::stack<int> nB;
-  int i = -1;
-  while(str[++i]) // la je stock
-  {
-    if( str[i] == ' ')
-      i++;
-    if(isdigit str[i]) // donc ya que des chiffres entre 0  et 9
-    {
-      stack.push( atoi str[i].c_str());
-    }
-    else if ( str[i] + - * / )
-    {
-    // 3 2 1 +  => 3 3 => erreur : 3 3 => pas doperateur = erreur
-    // 3 2 1 + -  => 3 3 - => pas erreur  : 3 2 + 1 - => 3 3 - => 3 - 3
-      if stack.size() < 2
-        return err trop petit; 
-    // start calcul
-    int a = stack.top();
-    stack.pop();
-    int b = stack.top();
-    stack.pop()
-     switch(str[i])
-     {
-     case '+':
-       stack.push(b + a);
-       break;
-      case '/':
-        if(a == 0)
-        print peut pas diviser par 0;
-        return;
-     ...
-     }
-    else
-      print char pas bien return;
-  }
- if  stack.size() != 1
-   pint missing operator return
-  cout << stack.top()<< endl;
-  
-
-}
-
 ex02
 int main(int argc, char argv)
 {
@@ -80,6 +22,7 @@ int main(int argc, char argv)
   {
     cout << vector[i] << " " ;
   }
+
   std::clock_t start = std::clock();
   tamersort(vec);
   std::clock_t end = std::clock();
@@ -112,6 +55,7 @@ int main(int argc, char argv)
 // ici on trie dans 2 categ par 2 chiffre a la fois
 // on met dans smaller et larger, ca fait des pairs
 // on fait pair et on trie
+
 void tamersort(std::vector<int> &vec)
 {
   if(vec.size() < 2)

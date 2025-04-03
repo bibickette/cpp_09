@@ -6,11 +6,11 @@
 #    By: phwang <phwang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 13:17:33 by phwang            #+#    #+#              #
-#    Updated: 2025/04/03 00:20:21 by phwang           ###   ########.fr        #
+#    Updated: 2025/04/03 15:22:14 by phwang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = hell
+NAME = PmergeMe
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE_DIR) -I$(COLOR_DIR)
@@ -21,6 +21,7 @@ SRC_DIR = src/
 OBJ_DIR = obj
 
 SRC_FILES = \
+	PmergeMe.cpp \
 	main.cpp
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 

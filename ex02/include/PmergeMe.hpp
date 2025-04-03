@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 00:19:38 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 15:25:56 by phwang           ###   ########.fr       */
+/*   Created: 2025/04/03 15:22:18 by phwang            #+#    #+#             */
+/*   Updated: 2025/04/03 16:14:43 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PmergeMe.hpp"
+#ifndef PMERGEME_HPP
+#define PMERGEME_HPP
 
-using std::cout;
-using std::endl;
+#include <iostream>
+#include <deque>
+#include <cstring>
+#include <cstdlib>
+#include <vector>
+#include <ctime>
+#include "Color.hpp"
 
-int main(int argc, char **argv)
-{
-	if(argc == 1)
-	{
-		cout << RED << "Please enter at least one argument" << RESET << endl;
-		return 0;
-	}
-	PMergeMe(argv);
-	return 0;
-}
+void PMergeMe(char **argv);
+
+#endif
