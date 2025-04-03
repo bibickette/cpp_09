@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:22:37 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 16:40:48 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/03 19:00:49 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ static void jacobsthal(std::vector<int> &smaller, std::vector<int> &larger)
     for (size_t i = 0; i < jacobsthal.size(); i++)
     {
         int index = jacobsthal[i];
-        std::vector<int>::iterator pos = std::lower_bound(larger.begin(), larger.end(), smaller[i]);
+        std::vector<int>::iterator pos = std::lower_bound(larger.begin(), larger.end(), smaller[index]);
         larger.insert(pos, smaller[index]);
         isInserted[index] = true;
     }
@@ -217,7 +217,7 @@ void PMergeMe(char **argv)
     std::vector<int> arg;
     std::deque<int> arg2;
     
-    int i = -1;
+    int i = 0;
     while(argv[++i])
     {
         int j = -1;
