@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:22:37 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 19:00:49 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/03 19:01:25 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ static void jacobsthal(std::deque<int> &smaller, std::deque<int> &larger)
     for (size_t i = 0; i < jacobsthal.size(); i++)
     {
         int index = jacobsthal[i];
-        std::deque<int>::iterator pos = std::lower_bound(larger.begin(), larger.end(), smaller[i]);
+        std::deque<int>::iterator pos = std::lower_bound(larger.begin(), larger.end(), smaller[index]);
         larger.insert(pos, smaller[index]);
         isInserted[index] = true;
     }
