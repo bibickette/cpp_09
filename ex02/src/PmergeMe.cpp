@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:22:37 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 16:23:23 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/03 16:40:48 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,8 +217,21 @@ void PMergeMe(char **argv)
     std::vector<int> arg;
     std::deque<int> arg2;
     
-    int i = 1;
+    int i = -1;
+    while(argv[++i])
+    {
+        int j = -1;
+        while(argv[i][++j])
+        {
+            if(!isdigit(argv[i][j]))
+            {
+                cout << RED << "only digits are accepted" << RESET << endl;
+                return;
+            }
+        }
+    }
     // check and keep arg
+    i = 1;
     while (argv[i])
     {
         if (!isInt(argv[i]))
