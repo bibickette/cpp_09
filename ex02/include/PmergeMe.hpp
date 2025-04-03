@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:22:18 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 16:14:43 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/03 19:02:33 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@
 #include <ctime>
 #include "Color.hpp"
 
-void PMergeMe(char **argv);
+void PmergeMe(char **argv);
 
 #endif

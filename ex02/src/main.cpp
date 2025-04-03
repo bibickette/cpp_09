@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 00:19:38 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 15:25:56 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/03 19:02:33 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int main(int argc, char **argv)
 		cout << RED << "Please enter at least one argument" << RESET << endl;
 		return 0;
 	}
-	PMergeMe(argv);
+	PmergeMe(argv);
 	return 0;
 }
