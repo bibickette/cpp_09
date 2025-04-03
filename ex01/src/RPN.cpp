@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 23:43:14 by phwang            #+#    #+#             */
-/*   Updated: 2025/04/03 00:18:33 by phwang           ###   ########.fr       */
+/*   Updated: 2025/04/03 11:37:33 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void RPN(std::string arg)
 	int i = -1;
 	while(arg[++i])
 	{
-		if(arg[i] == ' ')
+		while(arg[i] == ' ')
 		{ i++; }
 		if(isdigit(arg[i]))
 		{
