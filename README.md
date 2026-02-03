@@ -31,6 +31,7 @@ The exercises introduce **file handling**, **mathematical expression evaluation*
 
 File handling and data parsing exercise:
 - Implement a program to read and process historical Bitcoin exchange data
+- The program takes a **single command-line argument**, which is the input file `input.txt` located in the repository
 - Compute and display results based on input values
 - Handle invalid or malformed input gracefully
 

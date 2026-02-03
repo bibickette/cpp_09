@@ -32,6 +32,7 @@ Les exercices introduisent **la gestion de fichiers**, **l’évaluation d’exp
 
 Exercice de lecture de fichiers et parsing :
 - Implémenter un programme pour lire et traiter des données historiques sur le Bitcoin
+- Le programme prend **un seul argument en ligne de commande**, qui est le fichier `input.txt` présent dans le dépôt
 - Calculer et afficher des résultats selon les valeurs d’entrée
 - Gérer les entrées invalides ou malformées
 
